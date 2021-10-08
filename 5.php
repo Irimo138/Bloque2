@@ -4,10 +4,8 @@
     </head>
     <body>
         <?php
-        class mostrarMeses{
-            public $arrayasoc;
-            public function __construct(){
-                $this->arrayasoc=[
+        
+                $meses= array(
                     "Enero"=>"31",
                     "Febrero"=>"28",
                     "Marzo"=>"31",
@@ -20,15 +18,11 @@
                     "Octubre"=>"31",
                     "Noviembre"=>"30",
                     "Diciembre"=>"31",
-                ];
-            }
-            function mostrarArray(){
-                print_r($this->arrayasoc);
+                );
+            foreach ($meses as $key => $value) {
+                echo $key . " - ". $value;
                 echo "<br>";
             }
-        }
-        $mostrarMeses = new mostrarMeses();
-        $mostrarMeses->mostrarArray();
         ?>
     </body>
 </html>

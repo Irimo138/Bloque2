@@ -5,12 +5,11 @@ $factorial[0] = 0;
 for ($i=1; $i < sizeof($numeros) ; $i++) { 
     $val = 1;
     for ($j=1; $j < $numeros[$i]; $j++) { 
-        $val = $val * $numeros[$i];
+        $val = $val * $j;
     }
-    $factorial[$i] = $val;
+    echo "<br>";
+    echo $val;
 }
-for ($i=0; $i <sizeof($factorial); $i++) { 
-    echo $factorial[$i]."</br> ";
-}
+
 
 ?>

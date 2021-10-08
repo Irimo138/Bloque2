@@ -8,10 +8,18 @@
 </head>
 <body>
     <?php
-     $enero = array();
-     $febrero = array();
-     $marzo = array();
-     $octubre = array();
+    $meses = array('enero','febrero');
+     $enero = array('nombre1' => 'Iri',
+                    'nombre2' =>'Asis',
+                    'nombre3' => 'Mikel');
+     $febrero = array('Imanol', 'Xabi');
+
+
+        foreach ($enero as $key => $value) {
+            echo $key . " - ". $value;
+            echo "<br>";
+        }
+    
     ?>
 </body>
 </html>
