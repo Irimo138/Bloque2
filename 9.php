@@ -17,13 +17,17 @@
         }
     }
         function cuadrado($lado){
+            try{
             if ($lado < 0){
                 throw new Exception ('Insertar un numero positivo');
             } else {
                 return $lado * $lado;
             }
-            
+        }catch(Exception $e){
+            echo $e->getMessage();
         }
+    }
+
         for ($i=0; $i < 4; $i++) { 
             $num = random_int(-2, 5);
             echo cuadrado($num);

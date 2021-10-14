@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-        class Person {
+        class person {            
 
             function __construct($name, $surname, $dni)
             {
@@ -22,8 +22,31 @@
             }
             
         }
-        $user1 = new Person('Asis', 'caballero','72557824T');
-        $user1 ->mostrar();
+        $user1 = new person('Asis', 'caballero','72557824T');
+       //$user1 ->mostrar();
+
+        class user extends person {
+            public function __construct($puntos,$dni,$nombre,$apellido) {
+                parent::__construct($dni,$nombre,$apellido);
+                $this->puntos = $puntos;
+            }
+         
+            public function getPunto() {
+                return $this->firstField;
+            }
+            public function setPuntos($x) {
+                $this->puntos = $x;
+            }
+
+            function mostrar(){
+                echo $this->name ." ". $this -> surname." ";
+                echo " puntos: ".$this->puntos;
+
+            }
+        }
+        $user2 = new user(50,'Soto', 'iriarte','72557824T');
+        $user2 ->mostrar();
+    
         
         
     ?>
