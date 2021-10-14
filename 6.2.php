@@ -8,9 +8,7 @@
 </head>
 <body>
     <?php
-    $mes;
-    $str = "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre";
-    $mes = explode(" ", $str);
+    
     class birthday{
 
         function __construct($name, $month){
@@ -18,10 +16,18 @@
         $this -> month = $month;
         }
 
-        function addbirthday(){
-            
+        function addbirthday($name, $month){
+        $mes;
+        $str = "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre";
+        $mes = explode(" ", $str);
+            foreach ($mes as $key => $value) {
+                echo $value;
+                echo "<br>";
+            }
         }
     }
+    $usuario = new birthday('Unai','marzo');
+    $usuario -> addbirthday($usuario->name, $usuario->month);
     
     
     ?>
