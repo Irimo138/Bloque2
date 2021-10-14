@@ -9,17 +9,26 @@
 </head>
 <body>
     <?php
-        $dimension = 4 ;
+    $max = 5;
+    $min = -2;
+    class cuadrado{
+        function __construct($dimension){
+            $this->dimension = $dimension;
+        }
+    }
         function cuadrado($lado){
             if ($lado < 0){
-                // Lanzamos una excepción
                 throw new Exception ('Insertar un numero positivo');
             } else {
                 return $lado * $lado;
             }
             
         }
-        echo cuadrado($dimension);
+        for ($i=0; $i < 4; $i++) { 
+            $num = random_int(-2, 5);
+            echo cuadrado($num);
+            echo "<br>";
+        }
         
     ?>
 </body>

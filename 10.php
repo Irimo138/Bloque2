@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-        class user {
+        class Person {
 
             function __construct($name, $surname, $dni)
             {
@@ -17,16 +17,13 @@
                 $this-> dni = $dni;
             }
 
-            function mostrar($name, $surname){
-                $nom = $this -> name;
-                $sur = $this -> surname;
-                $str = $nom ." ". $sur;
-                return $str;
+            function mostrar(){
+                echo $this->name ." ". $this -> surname;
             }
             
         }
-        $user1 = new user('Asis', 'caballero','72557824T');
-        mostrar($user1 -> name, $user1 -> surname);
+        $user1 = new Person('Asis', 'caballero','72557824T');
+        $user1 ->mostrar();
         
         
     ?>
